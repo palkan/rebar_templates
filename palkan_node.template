@@ -1,0 +1,26 @@
+{variables, [
+  {nodeid, "mynode"},
+  {hb_api_key, ""},
+  {otp_version, "17"},
+  {year, "2014"},
+  {author, "palkan"},
+  {project_name, "My Project"}
+]}.
+{template, "palkan.gitignore", ".gitignore"}.
+{template, "palkan.readme", "Readme.md"}.
+{template, "palkan.changelog", "Changelog.md"}.
+{template, "palkan.license", "LICENSE"}.
+{template, "palkan_node.makefile", "Makefile"}.
+{template, "palkan_node.reltool.config", "reltool.config"}.
+{template, "palkan_node.rebar.config", "rebar.config"}.
+{file, "palkan_node.erl.script", "files/erl"}.
+{chmod, 8#744, "files/erl"}.
+{file, "palkan_node.nodetool", "files/nodetool"}.
+{chmod, 8#744, "files/nodetool"}.
+{file, "palkan_node.runner", "files/{{nodeid}}"}.
+{chmod, 8#744, "files/{{nodeid}}"}.
+{template, "palkan_node.app.config", "files/app.config"}.
+{template, "palkan_node.app.config", "files/app.config.sample"}.
+{template, "palkan_node.vm.args", "files/vm.args"}.
+{template, "palkan_node.vm.args", "files/vm.args.sample"}.
+{file, "palkan_node.install_upgrade.escript", "files/install_upgrade.escript"}.
