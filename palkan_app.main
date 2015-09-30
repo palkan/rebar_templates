@@ -1,0 +1,33 @@
+%% Copyright
+-module({{appid}}).
+-author({{author}}).
+-include_lib("{{appid}}/include/{{appid}}.hrl").
+-include_lib("{{appid}}/include/log.hrl").
+-include_lib("{{appid}}/include/priv.hrl").
+-define(APPS, [lager]).
+
+%% ------------------------------------------------------------------
+%% Common Application Function Exports
+%% ------------------------------------------------------------------
+
+-export([start/0, stop/0, upgrade/0, ping/0]).
+
+%% ------------------------------------------------------------------
+%% API Function Exports
+%% ------------------------------------------------------------------
+
+-define(SERVER, {{appid}}_server).
+
+start() ->
+  ulitos_app:ensure_started(?APPS),
+  application:start({{appid}}).
+
+stop() ->
+  application:stop({{appid}}).
+
+upgrade() ->
+ ulitos_app:reload({{appid}}),
+ ok.
+ 
+ping() ->
+  pong.

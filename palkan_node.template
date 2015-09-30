@@ -1,8 +1,7 @@
 {variables, [
   {nodeid, "mynode"},
-  {hb_api_key, ""},
-  {otp_version, "17"},
-  {year, "2014"},
+  {otp_version, "18"},
+  {year, "2015"},
   {author, "palkan"},
   {project_name, "My Project"}
 ]}.

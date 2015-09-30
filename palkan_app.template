@@ -1,0 +1,23 @@
+{variables, [
+  {appid, "my_app"},
+  {otp_version, "18"},
+  {year, "2015"},
+  {author, "palkan"},
+  {project_name, "My Project"}
+]}.
+{template, "palkan.gitignore", ".gitignore"}.
+{template, "palkan.readme", "Readme.md"}.
+{template, "palkan.changelog", "Changelog.md"}.
+{template, "palkan.license", "LICENSE"}.
+{template, "palkan_app.rebar.config", "rebar.config"}.
+{file, "palkan_app.travis", ".travis.yml"}.
+{file, "palkan_app.elvis", ".elvis.yml"}.
+{file, "palkan_app.test_config", "specs/test.config"}.
+{template, "palkan_app.log", "include/log.hrl"}.
+{template, "palkan_app.priv_hrl", "include/priv.hrl"}.
+{template, "palkan_app.main_hrl", "include/{{appid}}.hrl"}.
+{template, "palkan_app.sup", "src/{{appid}}_sup.erl"}.
+{template, "palkan_app.app", "src/{{appid}}_app.erl"}.
+{template, "palkan_app.appsrc", "src/{{appid}}.app.src"}.
+{template, "palkan_app.main", "src/{{appid}}.erl"}.
+{template, "palkan_app.server", "src/{{appid}}_server.erl"}.
