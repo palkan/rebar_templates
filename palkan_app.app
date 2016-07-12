@@ -1,8 +1,8 @@
--module({{appid}}_app).
+-module({{name}}_app).
 -author({{author}}).
--include_lib("{{appid}}/include/{{appid}}.hrl").
--include_lib("{{appid}}/include/log.hrl").
--include_lib("{{appid}}/include/priv.hrl").
+-include_lib("{{name}}/include/{{name}}.hrl").
+-include_lib("{{name}}/include/log.hrl").
+-include_lib("{{name}}/include/priv.hrl").
 -behaviour(application).
 
 %% Application callbacks
@@ -13,9 +13,9 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-  ?I("Starting application: {{appid}}"),
+  ?I("Starting application: {{name}}"),
   ConfigPath = case ?Config(config, undefined) of
-    undefined -> "{{appid}}.config";
+    undefined -> "{{name}}.config";
     Else -> Else
   end,
   ulitos_app:load_config(?APP, ConfigPath, ["etc"]),
@@ -23,7 +23,7 @@ start(_StartType, _StartArgs) ->
     true -> sync:go();
     false -> pass
   end,
-  {{appid}}_sup:start_link().
+  {{name}}_sup:start_link().
 
 stop(_State) ->
   ok.

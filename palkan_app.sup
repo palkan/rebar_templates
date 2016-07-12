@@ -1,6 +1,6 @@
--module({{appid}}_sup).
+-module({{name}}_sup).
 -author({{author}}).
--include_lib("{{appid}}/include/priv.hrl").
+-include_lib("{{name}}/include/priv.hrl").
 -behaviour(supervisor).
 
 %% API
@@ -25,6 +25,6 @@ start_link() ->
 
 init([]) ->
   Children = [
-    ?CHILD({{appid}}_server, worker)
+    ?CHILD({{name}}_server, worker)
   ],
-  {ok, { {one_for_one, 5, 10} } }.
+  {ok, {{one_for_one, 5, 10}, Children}}.

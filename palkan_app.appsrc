@@ -1,4 +1,4 @@
-{application, {{appid}},
+{application, {{name}},
  [
   {description, ""},
   {vsn, "0.0.1"},
@@ -8,6 +8,6 @@
                   stdlib,
                   lager
                  ]},
-  {mod, { {{appid}}_app, []}},
+  {mod, { {{name}}_app, []}},
   {env, []}
  ]}.

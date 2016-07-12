@@ -1,3 +1,3 @@
 -author({{author}}).
--define(APP, {{appid}}).
+-define(APP, {{name}}).
 -define(Config(X,Y),ulitos_app:get_var(?APP,X,Y)).

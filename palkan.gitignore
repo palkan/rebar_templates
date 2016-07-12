@@ -35,3 +35,6 @@ ebin/
 # other files
 files/app.config
 files/vm.args
+
+_build/
+*.crashdump

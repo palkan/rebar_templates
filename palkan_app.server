@@ -1,8 +1,8 @@
--module({{appid}}_server).
+-module({{name}}_server).
 -author({{author}}).
--include_lib("{{appid}}/include/{{appid}}.hrl").
--include_lib("{{appid}}/include/log.hrl").
--include_lib("{{appid}}/include/priv.hrl").
+-include_lib("{{name}}/include/{{name}}.hrl").
+-include_lib("{{name}}/include/log.hrl").
+-include_lib("{{name}}/include/priv.hrl").
 -define(SERVER, ?MODULE).
 
 %% ------------------------------------------------------------------
