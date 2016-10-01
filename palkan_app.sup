@@ -27,4 +27,4 @@ init([]) ->
   Children = [
     ?CHILD({{name}}_server, worker)
   ],
-  {ok, {{one_for_one, 5, 10}, Children}}.
+  {ok, { {one_for_one, 5, 10}, Children} }.
